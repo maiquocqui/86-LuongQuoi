@@ -1,0 +1,206 @@
+//- .page-banner.banner
+	.item
+		.img
+			img(src="img/breadcrumb/4.png", alt="")
+	//- .item
+		.img
+			img(src="img/breadcrumb/1.png", alt="")
+	//- .item
+		.img
+			img(src="img/breadcrumb/1.png", alt="")
+.container
+	.breadcrumb-wrap
+		ol.breadcrumb
+			li
+				a(href="#!") Trang chủ
+			li
+				a(href="#!") Hệ thống
+section.contact-page
+	.container
+		//- h2.home-title.text-center Hệ thống cửa hàng
+		//- .system-map
+			.row
+				.col-12.col-md-5.col-lg-4.col-xl-3
+					section.findmap-wrap.clearfix
+						.findmap
+							//- h1.system-title Hệ thống phân phối
+							.filtermap.clearfix
+								.label Chọn khu vực bạn muốn bắt đầu
+								.field.form_desc
+									select.form-select
+										option(value='') Chọn Tỉnh/Thành phố
+										option TP Hồ Chí Minh
+										option Hà Nội
+								.field.form_desc
+									select.form-select
+										option(value='') Chọn Quận/Huyện
+								input.btn-searchmap(type='submit', style='display: none;', value='Tìm kiếm')
+								//- .hidden-xs-up
+									.searh-text
+										label hoặc
+										input.form-text(type='text', maxlength='128', name='address', size='60', value='', autocomplete='off', placeholder='Nhập tên đường, tỉnh thành, quận huyện')
+										input.btn.btn-large.btn-primary(type='submit', value='Tìm kiếm')
+						.addresslist.clearfix
+							.dealer-list
+								ul.noli.list_system
+									li
+										span.number 1
+										div
+											strong Lương Quới - Parkson Đà Nẵng
+											div
+												span Địa chỉ:
+												|  Gian F2-2019 tầng 2 TTTM Parkson 255-257 Hùng Vương, P.Vĩnh Trung, Q.Thanh Khê, TP.Đà Nẵng
+											#d_1.distance
+												span#disval.value(attr-dist='') 170.3
+												span.units km
+												span.time2
+										.products
+										a#la_0(name='la_0')
+									li
+										span.number 2
+										div
+											strong Lương Quới - Indochina Riverside Tower
+											div
+												span Địa chỉ:
+												|  Tầng trệt, lô G17-19, 74 Bạch Đằng, Q.Hải Châu, TP. Đà Nẵng
+											#d_2.distance
+												span#disval.value(attr-dist='') 173.1
+												span.units km
+												span.time2
+										.products
+										a#la_1(name='la_1')
+									li.active
+										span.number 3
+										div
+											strong Đà Nẵng
+											div
+												span Địa chỉ:
+												|  Indochina Riverside Tower Gian G17-19, tầng trệt, 74 Bạch Đằng, Q. Hải Châu. TP. Đà Nẵng
+											div
+												span Điện thoại:
+												|  (0511) 261 9999
+											#d_3.distance
+												span#disval.value(attr-dist='') 173.3
+												span.units km
+												span.time2
+										.products
+										a#la_2(name='la_2')
+									li
+										span.number 4
+										div
+											strong American Tourister - Big C Quy Nhơn
+											div
+												span Địa chỉ:
+												|  Shop 22, Khu Đô Thị Vũng Chua, P. Ghềnh Ráng, TP. Quy Nhơn
+											#d_4.distance
+												span#disval.value(attr-dist='') 485.7
+												span.units km
+												span.time2
+										.products
+										a#la_3(name='la_3')
+									li#l_4.clinic_list
+										span.number 5
+										div
+											strong House Of Lương Quới - Vincom Lê Thánh Tông
+											div
+												span Địa chỉ:
+												|  Quầy L2-02 tầng 2, TTTM Vincom Hải Phòng, Số 1 Lê Thánh Tông, P.Mái Tơ, Q.Ngô Quyền, TP Hải Phòng
+											#d_5.distance
+												span#disval.value(attr-dist='') 600.3
+												span.units km
+												span.time2
+										.products
+										a#la_4(name='la_4')
+									li#l_5.clinic_list
+										span.number 6
+										div
+											strong House Of Lương Quới - Vincom Hạ Long
+											div
+												span Địa chỉ:
+												|  Gian hàng L1-15A, TTTM Vincom Hạ Long, Khu Cột Đồng Hồ, Bạch Đằng, TP Hạ Long, tỉnh Quảng Ninh
+											#d_6.distance
+												span#disval.value(attr-dist='') 601.0
+												span.units km
+												span.time2
+										.products
+										a#la_5(name='la_5')
+									li#l_6.clinic_list
+										span.number 7
+										div
+											strong House Of Lương Quới - Vincom Buôn Ma Thuột
+											div
+												span Địa chỉ:
+												|  Gian L3-10-11, tầng 3, TTTM Vincom Plaza Buôn Ma Thuột, số 78 Lý Thường Kiệt, Phường Thắng Lợi, Tp Buôn Ma Thuột, tỉnh Đắk Lắk
+											#d_7.distance
+												span#disval.value(attr-dist='') 602.9
+												span.units km
+												span.time2
+										.products
+										a#la_6(name='la_6')
+									li#l_7.clinic_list
+										span.number 8
+										div
+											strong House Of Lương Quới - Vincom Mega Mall Times City
+											div
+												span Địa chỉ:
+												|  Gian hàng TN-26, TTTM Vincom Megamall Times City, Số 458, Phố Minh Khai, Phường Vĩnh Tuy, Quận Hai Bà Trưng, Hà Nội
+											#d_8.distance
+												span#disval.value(attr-dist='') 604.7
+												span.units km
+												span.time2
+										.products
+										a#la_7(name='la_7')
+									li#l_8.clinic_list
+										span.number 9
+										div
+											strong House Of Lương Quới - Vincom A Bà Triệu
+											div
+												span Địa chỉ:
+												|  Gian L4-99 tầng 4 TTTM Vincom A, 191 Bà Triệu, Q. Hai Bà Trưng, Hà Nội
+											#d_9.distance
+												span#disval.value(attr-dist='') 606.1
+												span.units km
+												span.time2
+										.products
+										a#la_8(name='la_8')
+				.col-12.col-md-7.col-lg-8.col-xl-9
+					#map
+						iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1856724735662!2d106.67962971538384!3d10.79708709230752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d6ca20c933%3A0x7446d683cfdc48e8!2zMjYwIFBoYW4gxJDDrG5oIFBow7luZywgcGjGsOG7nW5nIDEsIFBow7ogTmh14bqtbiwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1517371920759', width='100%', height='480', frameborder='0', style='border:0', allowfullscreen='')
+		h2.home-title.text-center Hệ thống gian hàng online
+		.online-system
+			.row.justify-content-center
+				.col-12.col-md-6.col-lg-4.col-xl-custom
+					a.system-col(href="#!")
+						figure
+							.system-img
+								img(src="img/partner/tiki.png", alt="")
+							figcaption
+								.system-name Tiki.vn
+				.col-12.col-md-6.col-lg-4.col-xl-custom
+					a.system-col(href="#!")
+						figure
+							.system-img
+								img(src="img/partner/lazada.png", alt="")
+							figcaption
+								.system-name Lazada
+				.col-12.col-md-6.col-lg-4.col-xl-custom
+					a.system-col(href="#!")
+						figure
+							.system-img
+								img(src="img/partner/sendo.png", alt="")
+							figcaption
+								.system-name Sendo
+				.col-12.col-md-6.col-lg-4.col-xl-custom
+					a.system-col(href="#!")
+						figure
+							.system-img
+								img(src="img/partner/shopee.png", alt="")
+							figcaption
+								.system-name Shopee
+				.col-12.col-md-6.col-lg-4.col-xl-custom
+					a.system-col(href="#!")
+						figure
+							.system-img
+								img(src="img/partner/adayroi.png", alt="")
+							figcaption
+								.system-name Adayroi

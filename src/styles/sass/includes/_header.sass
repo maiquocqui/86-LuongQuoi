@@ -1,0 +1,310 @@
+header
+	background: $white
+	box-shadow: 0px 10px 30px -10px color-rgba($black,0.3)
+	.header-top-wrap, .header-main-wrap
+		+flexbox
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+		justify-content: space-between
+	.col-right
+		+flexbox
+		float: right
+	.header-top
+		border-bottom: 1px solid darken($white,3%)
+		// background: darken($white,2%)
+	.language
+		float: left
+		.dropdown
+			a
+				+flexbox
+				align-items: center
+				align-content: center
+				color: darken($white,60%)
+				+fs(13rem)
+				line-height: 30px
+				.img
+					margin-right: 10px
+				.text
+					font-weight: 500
+			.dropdown-toggle
+				&:after
+					content: '\f107'
+					width: auto
+					height: auto
+					border: none
+			.dropdown-menu
+				background: $green
+				padding: 5px 0
+				+bor-rad(0)
+				border: none
+				margin: 0
+				&:before
+					content: ''
+					width: 0
+					height: 0
+					border: 5px solid
+					border-color: transparent transparent $green transparent
+					border-top: none
+					+pos(abs, -5px null null 10px)
+				a
+					padding: 3px 10px
+					color: $white
+					&:hover
+						background: color-rgba($white,0.2)
+	.email, .hotline
+		a
+			color: darken($white,60%)
+			font-weight: 500
+			+fs(13rem)
+			line-height: 30px
+			&:hover
+				color: $green
+	.email
+		a
+			&:before
+				content: 'email'
+				font-family: 'material icons'
+				line-height: 1
+				vertical-align: middle
+				+fs(16rem)
+				color: $green
+				margin-right: 5px
+	.hotline
+		margin-left: 30px
+		a
+			&:before
+				content: 'phone'
+				font-family: 'material icons'
+				line-height: 1
+				vertical-align: middle
+				+fs(16rem)
+				color: $green
+				margin-right: 5px
+	.header-main
+		background: $maingradient
+		.col-right
+			height: 80px
+			+flexbox
+			align-items: center
+			align-content: center
+	.sitelogo
+		height: 80px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		float: left
+		img
+			height: 60px
+	.search
+		+flexbox
+		align-items: center
+		align-content: center
+		width: 350px
+		height: 80px
+		float: left
+		margin-left: 50px
+		.searchbox
+			+flexbox
+			width: 100%
+			+bor-rad(5px)
+			background: $white
+			// border: 1px solid darken($white,15%)
+			padding: 2px
+			input
+				line-height: 34px
+				+fs(13rem)
+				color: darken($white,60%)
+				padding: 0px 20px
+				flex: auto
+				border: none
+			.searchbutton
+				+mainbutton
+				background: $redgradient
+				+fs(0rem)
+				line-height: 34px
+				padding: 0px 8px
+				text-align: center
+				white-space: nowrap
+				cursor: pointer
+				.material-icons
+					vertical-align: middle
+				&:hover
+					box-shadow: 0px 10px 20px -10px $red
+	.sitefeature
+		+flexbox
+		align-items: center
+		align-content: center
+		width: 400px
+		height: 80px
+		margin-left: 50px
+		float: left
+		.feature
+			width: 33.33%
+			figure
+				+flexbox
+				align-items: center
+				align-content: wrap
+				.material-icons
+					+fs(36rem)
+					color: $white
+				figcaption
+					padding-left: 10px
+					+fs(11rem)
+					line-height: 1.2
+					color: $white
+					opacity: 0.8
+	.login
+		+pos(rel,null)
+		padding-left: 35px
+		ul
+			li
+				line-height: 1
+				a
+					+fs(11rem)
+					line-height: 1
+					color: $white
+					&:hover
+						color: $white
+				&:last-child
+					a
+						+fs(14rem)
+						font-weight: 700
+						&:before
+							content: 'person'
+							font-family: 'material icons'
+							+fs(36rem)
+							color: $white !important
+							line-height: 1
+							+pos(abs, -1px null null 0)
+	.cart
+		margin-left: 20px
+		.cart-toggle
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(13rem)
+			font-weight: 600
+			+bor-rad(5px)
+			overflow: hidden
+			border: 2px solid color-rgba($white,0.8)
+			padding: 2px 5px
+			.material-icons
+				margin-right: 5px
+				+fs(18rem)
+				line-height: 1
+				color: $white
+			.cart-amount
+				+flexbox
+				align-items: center
+				align-content: center
+				font-weight: 600
+				cursor: pointer
+				color: $white
+				&:hover
+					color: $white
+				.amount
+					+fs(13rem)
+					font-weight: 600
+					padding: 3px 5px
+					background: $redgradient
+					color: $white
+					+bor-rad(3px)
+					line-height: 1
+					margin-left: 5px
+				
+	.header-menu
+		border-top: 1px solid darken($white,3%)
+		.menu
+			.mobile-logo
+				display: none
+			.menu-content
+			.menu-wrap
+			ul.menu-link
+				+flexbox
+				border-left: 1px solid darken($white,3%)
+				> li
+					border-right: 1px solid darken($white,3%)
+					padding-bottom: 3px
+					// flex: auto
+					+transition(all,0.5s)
+					> a
+						display: block
+						+fs(13rem)
+						text-transform: uppercase
+						font-weight: 700
+						color: darken($white,60%)
+						line-height: 20px
+						padding: 10px 25px
+						text-align: center
+						+pos(rel,null)
+						&:before
+							content: ''
+							+pos(abs, 100% 0 null 0)
+							height: 3px
+							background: $maingradient
+							opacity: 0
+							+transition(all,0.5s)
+					&.sale
+						// background: linear-gradient(135deg,$amber,$orange)
+						a
+							color: $orange
+							// &:before
+							// 	display: none
+						// &:hover
+						// 	filter: brightness(120%)
+						// 	a
+						// 		color: $white
+					&.news
+						// background: linear-gradient(135deg,$pink,$red)
+						a
+							color: $red
+							// &:before
+							// 	display: none
+						// &:hover
+						// 	filter: brightness(120%)
+						// 	a
+						// 		color: $white
+					&.has-sub
+						+pos(rel,null)
+						.sub
+							display: none
+							+pos(abs, 100% null null 0)
+							padding-top: 10px
+							ul
+								min-width: 200px
+								white-space: nowrap
+								background: $green
+								padding: 0px 20px
+								+pos(rel,null)
+								&:before
+									content: ''
+									width: 0
+									height: 0
+									border: 7px solid
+									border-color: transparent transparent $green transparent
+									border-top: none
+									+pos(abs, -7px null null 30px)
+								> li
+									border-bottom: 1px solid color-rgba($white,0.5)
+									&:last-child
+										border-bottom: none
+									a
+										display: block
+										+fs(13rem)
+										text-transform: uppercase
+										font-weight: 700
+										color: $white
+										line-height: 20px
+										padding: 15px 0
+										&:hover
+											color: $lime
+					&:hover
+						.sub
+							display: block
+					&:hover, &.active
+						> a
+							color: $green
+							&:before
+								opacity: 1

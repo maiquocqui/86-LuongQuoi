@@ -1,0 +1,146 @@
+.sidebar-category
+	ul
+		+bor-rad(5px)
+		overflow: hidden
+		background: darken($white,2%)
+		li
+			border-bottom: 1px dashed darken($white,10%)
+			&:last-child
+				border-bottom: none
+			a
+				display: block
+				padding: 10px 20px
+				+fs(14rem)
+				// line-height: 20px
+			&:hover
+				a
+					color: $green
+			&.active
+				a
+					background: $maingradient
+					font-weight: 600
+					color: $white
+.career-page
+	padding: 0px 0 60px
+	.job-list
+		.job
+			border-bottom: 1px solid darken($white,10%)
+			.job-title
+				+flexbox
+				padding: 20px 0
+				cursor: pointer
+				.number
+					+fs(28rem)
+					font-weight: 700
+					opacity: 0.5
+					text-align: center
+					width: 50px
+				.name
+					+fs(18rem)
+					text-transform: uppercase
+					font-weight: 600
+					width: calc(100% - 50px - 80px)
+					+transition(all,0.5s)
+				.date
+					+fs(13rem)
+					font-style: italic
+					color: darken($white,40%)
+					width: 80px
+				&:hover
+					.name
+						color: $green
+			.job-content
+				padding-left: 50px
+				padding-bottom: 30px
+				+transition(all,0s)
+			&.active
+				.job-title
+					.name
+						color: $green
+				.job-content
+					display: block
+	.table-wrap
+	.table
+		thead
+			th
+				color: $main
+				text-transform: uppercase
+				font-weight: 700
+		th, td
+			border: none
+			padding: 12px 0
+			color: darken($white,40%)
+			font-weight: 600
+			border-bottom: 1px solid darken($white,5%)
+			&:first-child
+				color: darken($white,60%)
+				width: 150px
+			&:nth-child(3)
+				width: 100px
+				text-align: center
+			&:last-child
+				width: 200px
+				text-align: right
+			a
+				color: lighten($green,20%)
+				font-weight: 700
+				&:hover
+					color: $yellow
+		tr
+			&:last-child
+				td
+					border-bottom: none
+	.btn-wrap
+		+flexbox
+		align-items: center
+	.btn-apply
+		display: inline-block
+		padding: 0px 20px
+		line-height: 36px
+		margin: 30px 0
+		+fs(13rem)
+		text-transform: uppercase
+		+mainbutton()
+		font-weight: normal
+	.btn-goback
+		color: darken($white,40%)
+		margin-left: 15px
+		&:hover
+			color: $yellow
+	.apply-frm
+		max-width: 900px
+		border: 1px solid darken($white,10%)
+		padding: 15px 25px
+		display: none
+		background: darken($white,3%)
+		+transition(all,0s)
+		h4
+			color: $red
+			margin-bottom: 10px
+		.form-group
+			label
+				font-weight: 600
+				+fs(14rem)
+				margin-bottom: 5px
+			input, textarea
+				width: 100%
+				+fs(14rem)
+				padding: 7px 15px
+				border: 1px solid darken($white,10%)
+			input[type="file"]
+				padding: 0
+				border: none
+				+fs(13rem)
+				color: darken($white,40%)
+		.frm-btn
+			padding: 0px 15px
+		input[type="submit"]
+			line-height: 36px
+			+fs(13rem)
+			text-transform: uppercase
+			padding: 0px 30px
+			background: $yellow
+			color: $main
+			border: none
+			+mainbutton()
+			font-weight: normal

@@ -1,0 +1,136 @@
+.system-map
+	+pos(rel,null)
+	padding-bottom: 60px
+	.findmap-wrap
+		// padding-right: 50px
+		.mapfilter-toggle
+		.findmap
+			padding-bottom: 24px
+			margin-bottom: 30px
+			border-bottom: 1px solid darken($white,10%)
+			.label
+				+fs(13rem)
+				text-transform: uppercase
+				font-weight: 700
+				margin-bottom: 15px
+			.field
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+			select
+				@extend .form-control
+				width: 100%
+				border: 1px solid darken($white,10%)
+				font-weight: 500
+				+fs(14em)
+				padding: 0px 20px
+				+bor-rad(0)
+				&:focus
+					border-color: $green
+					box-shadow: 0 0 0 0.2rem color-rgba(lighten($green,0%),0.2)
+	.addresslist
+		ul
+			max-height: calc(600px - 190px)
+			overflow: auto
+			padding-right: 20px
+			&::-webkit-scrollbar-track
+				background-color: darken($white,10%)
+			&::-webkit-scrollbar
+				width: 3px
+				background-color: darken($white,10%)
+			&::-webkit-scrollbar-thumb
+				background-color: darken($white,40%)
+			li
+				padding: 10px 0
+				cursor: pointer
+				border-bottom: 1px solid darken($white,10%)
+				&:last-child
+					border-bottom: none
+				.number
+					display: none
+				strong
+					+fs(12rem)
+					line-height: 1.3
+					text-transform: uppercase
+					color: $main
+					font-weight: 600
+					&:before
+						content: '\f041'
+						margin-right: 10px
+						color: $red
+				div
+					+fs(12rem)
+					color: darken($white,60%)
+				.distance
+					*
+						font-weight: 600
+				&:hover, &.active
+					strong
+						color: $green
+				&.active
+					strong
+						font-weight: 600
+						// &:before
+						// 	content: '\f041'
+						// 	margin-right: 10px
+						// 	color: $red
+	#map
+	#map_canvas, iframe
+		height: 600px
+.store-list
+	article
+		margin-bottom: 30px
+	.store-col
+		figure
+			.store-img
+				display: block
+				img
+					width: 100%
+			figcaption
+				padding: 15px 20px
+				background: darken($white,3%)
+				.store-name
+					+fs(16rem)
+					font-weight: 700
+					text-transform: uppercase
+					margin-bottom: 5px
+				.store-des
+					+fs(14rem)
+					color: darken($white,60%)
+					ul
+						li
+							padding-left: 20px
+							+pos(rel,null)
+							.fa
+								+pos(abs, 4px null null 0)
+								color: lighten($green,20%)
+
+.online-system
+	.col-xl-custom
+		flex: 0 0 20%
+		max-width: 20%
+	.system-col
+		display: block
+		margin-bottom: 20px
+		figure
+			.system-img
+				height: 160px
+				+flexbox
+				justify-content: center
+				align-items: center
+				border: 1px solid darken($white,10%)
+				+bor-rad(10px)
+				img
+					max-width: 50%
+					max-height: 50%
+					+transition(all,0.5s)
+			figcaption
+				padding: 10px 0
+				.system-name
+					text-transform: uppercase
+					font-weight: 700
+					text-align: center
+			&:hover
+				.system-img
+					img
+						+transform(scale3d(1.2,1.2,1))

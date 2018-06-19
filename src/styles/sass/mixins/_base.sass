@@ -1,0 +1,49 @@
+// // Set Link Hover
+=link ($link, $hover:$link, $active:$link, $visit:$link)
+	color: #{$link}
+	&:visited
+		color: #{$visit}
+	&:hover
+		color: #{$hover}
+	&:active, &:focus , &.active, &.activated
+		color: #{$active}
+
+// Set bg hover
+=bg ($link, $hover:$link, $active:$link)
+	@if $link != "none"
+		background-color: #{$link}
+		&:hover
+			background-color: #{$hover}
+		&:active, &:focus , &.active, &.activated
+			background-color: #{$active}
+	@else
+		background: none
+		&:hover
+			background-color: #{$hover}
+		&:active, &:focus , &.active, &.activated
+			background-color: #{$active}
+
+// Flexbox
+=flexbox
+	display: -webkit-box
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: flex
+
+// Font size px to rem
+=fs($size)
+	font-size: ($size / 16)
+
+=mainbutton()
+	display: inline-block
+	text-transform: uppercase
+	font-weight: 600
+	color: $white
+	+bor-rad(5px)
+	background: $maingradient
+	border: none
+	+transition(all,0.5s)
+	&:hover
+		filter: brightness(110%)
+		box-shadow: 0px 10px 20px -10px $green

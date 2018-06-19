@@ -1,0 +1,227 @@
+footer
+	// margin-top: -40px
+	+pos(rel,null)
+	&:before
+		content: ''
+		display: block
+		width: 240px
+		height: 280px
+		background: url(../img/ft1.png) center center no-repeat
+		+pos(abs, -20px null null 30px)
+	&:after
+		content: ''
+		display: block
+		width: 332px
+		height: 300px
+		background: url(../img/ft2.png) center center no-repeat
+		+pos(abs, null 30px 0px null)
+	.footer-top
+		border: 1px solid darken($white,10%)
+		background: $white
+		+bor-rad(5px)
+		padding: 20px
+		+pos(rel,null)
+		z-index: 5px
+		// margin-top: -41px
+		margin-bottom: -41px
+		+flexbox
+		justify-content: center
+		align-items: center
+		align-content: center
+		box-shadow: 0px 5px 20px -5px color-rgba($black,0.3)
+	.contact-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+	
+	.subscribe-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		width: 700px
+		.module-title
+			+fs(14rem)
+			text-transform: uppercase
+			font-weight: 600
+			&:after
+				content: ''
+				display: block
+				width: 50px
+				height: 2px
+				background: $maingradient
+				margin-top: 5px
+		.subscribe
+			width: calc(100% - 200px)
+		.subscribefrm
+			+flexbox
+			input
+				line-height: 38px
+				+bor-rad(5px)
+				border: 1px solid darken($white,8%)
+				padding: 0px 15px
+				+fs(13rem)
+				flex: auto
+			.subscribebutton
+				+mainbutton
+				line-height: 40px
+				padding: 0px 15px
+				margin-left: 5px
+				+fs(13rem)
+				cursor: pointer
+				&:before
+					content: '\f1d9'
+					font-weight: normal
+					margin-right: 5px
+					line-height: 1
+	.footer-main
+		background: $maingradient
+		padding-top: 80px
+		.hotline
+			figure
+				+flexbox
+				align-items: center
+				align-content: center
+				.icon
+					line-height: 1
+					.material-icons
+						+fs(50rem)
+						color: $white
+						line-height: 1
+				figcaption
+					flex: auto
+					padding-left: 10px
+					.hotline-title
+						+fs(12rem)
+						font-weight: 500
+						color: $white
+						line-height: 10px
+					a
+						+fs(16rem)
+						font-weight: 700
+						color: $white
+						line-height: 1
+						&:hover
+							color: $white
+		.footer-col
+			margin-bottom: 40px
+			.title
+				+fs(14rem)
+				font-weight: 700
+				text-transform: uppercase
+				margin-bottom: 10px
+				color: $white
+			.about
+				color: $white
+				+fs(13rem)
+				line-height: 2.3
+				opacity: 0.8
+			.footer-link
+				a
+					display: block
+					+fs(13rem)
+					line-height: 2.3
+					color: $white
+					opacity: 0.8
+					&:before
+						content: ''
+						display: inline-block
+						vertical-align: middle
+						width: 0px
+						height: 3px
+						background: $white
+						+transition(all,0.5s)
+						margin-right: 0px
+					&:hover
+						color: $white
+						opacity: 1
+						&:before
+							width: 15px
+							margin-right: 5px
+			.contact
+				color: $white
+				+fs(13rem)
+				// line-height: 2.3
+				line-height: 1.5
+				ul
+					li
+						line-height: 2.3
+						opacity: 0.8
+				a
+					color: $white
+					display: block
+					margin-bottom: 15px
+					&:hover
+						color: $white
+						opacity: 1
+			.social
+				a
+					margin-right: 15px
+					+fs(18rem)
+					color: $white
+					opacity: 0.8
+					&:hover
+						color: $white
+						opacity: 1
+	.footer-bottom
+		padding: 15px 0
+		background: linear-gradient(to right,darken($lightgreen,5%),darken($green,5%))
+	.sitelogo
+		+flexbox
+		justify-content: center
+		margin-bottom: 10px
+		display: none
+		img
+			height: 40px
+	.payment
+		img
+			+bor-rad(3px)
+			background: $white
+			padding: 5px 10px
+	.copyright
+		+fs(13rem)
+		line-height: 15px
+		color: $white
+		text-align: center
+		a
+			color: $white
+			font-weight: 600
+			&:hover
+				color: $lime
+	.footer-nav
+		text-align: right
+		a
+			+fs(13rem)
+			line-height: 15px
+			color: $white
+			opacity: 0.8
+			+ a
+				margin-left: 20px
+			&:hover
+				color: $white
+				opacity: 1
+
+.fly-tool
+	+pos(fix, null 40px 60px null)
+	z-index: 100
+	a
+		width: 40px
+		height: 40px
+		+flexbox
+		+bor-rad(5px)
+		border: 2px solid darken($white,10%)
+		justify-content: center
+		align-items: center
+		align-content: center
+		background: $white
+		color: darken($white,60%)
+		+ a
+			margin-top: 5px
+		.material-icons
+			font-size: 18px
+		&:hover
+			color: $white
+			border-color: $lightgreen
+			background: $lightgreen
+			// background: $maingradient
+			// box-shadow: 0px 10px 20px -10px $green

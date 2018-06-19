@@ -1,0 +1,248 @@
+.container
+	.row.flex.flex-wrap
+		.col-12
+			section.cartstep.clearfix
+				.step.active.finish
+					.number 1
+					.name Giỏ hàng
+				.step.active.finish
+					.number 2
+					.name Đăng nhập
+				.step.active.finish
+					.number 3
+					.name Thông tin
+				.step.active
+					.number 4
+					.name Thanh toán
+	section.cart-page.clearfix
+		.row.flex.flex-wrap
+			.col-12.col-lg-8
+				//- section.minicart.hidden-lg-up.clearfix
+					.carttitle Đơn hàng (<strong>2</strong> sản phẩm)
+					a.btn-edit(href="cart.html") Thay đổi
+					.carttable.clearfix
+						.group.clearfix
+							.product.clearfix
+								a.productimg(href="#")
+									img(src="img/product/1.jpg", alt="")
+								.productdetail
+									h3.productname
+										a(href="#") UPLITE SPL 71cm Spinner
+							.amount
+								.price 500.000đ
+								.count x1
+								.total 500.000đ
+						.group.clearfix
+							.product.clearfix
+								a.productimg(href="#")
+									img(src="img/product/2.jpg", alt="")
+								.productdetail
+									h3.productname
+										a(href="#") COSMOLITE 3 75cm Spinner
+							.amount
+								.price 500.000đ
+								.count x1
+								.total 500.000đ
+						.group
+							.label Tổng tiền
+							.value.total 1.000.000đ
+						.group
+							.label Phí vận chuyển
+								a.help(href="#!" data-toggle="tooltip" data-placement="right" title="Xem chính sách giao hàng của ") <i class="fa fa-question-circle" aria-hidden="true"></i>
+							.value Miễn phí
+						//- .group
+							.desc-deliver
+								ul
+									li
+										strong TP.HCM: 
+										| Miễn phí vận chuyển <span> trong bán kính 30km </span> tính từ của hàng Hóc Môn số 465 Phạm Văn Sáng, Xuân Thới Thượng, Hóc Môn
+									li
+										strong TP.Cần Thơ:
+										| Miễn phí vận chuyển <span> trong bán kính 20km </span> tính từ của hàng Cần Thơ số 109 Nguyễn Đệ, phường An Hòa, quận Ninh Kiều
+									li Nếu địa chỉ giao hàng nằm ngoài khu vực miễn phí, Bộ phận giao hàng sẽ gọi điện cho quý khách để thông báo phí phát sinh trước khi giao hàng.
+						.group
+							.label Giảm giá
+							.value 1.000.000đ
+						.group
+							.label Số tiền phải thanh toán
+							.value 
+								strong 1.000.000đ
+								span (Giá chưa bao gồm VAT)
+				section.payment-info.clearfix
+					.carttitle Phương thức thanh toán
+					.cart-form.payment-list.clearfix
+						.payment-method
+							.select-group
+								input#ttnh(type="radio", name="rd1" checked)
+								label(for="ttnh")
+									.method-info
+										.method-img
+											img(src="img/cart/icon1.png", alt="")
+										.method-detail
+											.method-name Thanh toán khi nhận hàng
+											.method-des Quý khách sẽ thanh toán bằng tiền mặt khi giao hàng cho quý khách
+						.payment-method
+							.select-group
+								input#ttatm(type="radio", name="rd1")
+								label(for="ttatm")
+									.method-info
+										.method-img
+											img(src="img/cart/icon2.png", alt="")
+										.method-detail
+											.method-name Thanh toán bằng thẻ ATM
+											.method-des Thẻ ATM của bạn cần đăng ký sử dụng dịch vụ Internet Banking.
+												br
+												|Bạn sẽ được chuyển tới Napas để thanh toán
+						.payment-method
+							.select-group
+								input#ttqt(type="radio", name="rd1")
+								label(for="ttqt")
+									.method-info
+										.method-img
+											img(src="img/cart/icon3.png", alt="")
+										.method-detail
+											.method-name Thanh toán bằng thẻ tín dụng
+											.method-des Hỗ trợ Credit và Debit.
+												br
+												|Bạn sẽ được chuyển tới OnePay để thanh toán.
+						//- .payment-method.hidden
+							.select-group
+								input#tttg(type="radio", name="rd1")
+								label(for="tttg")
+									.method-info
+										.method-img
+											img(src="img/cart/icon4.png", alt="")
+										.method-detail
+											.method-name Thanh toán trả góp
+											.method-des Hỗ trợ Credit.
+												br
+												|Bạn sẽ được chuyển đến OnePay để thanh toán
+					//- .cart-form.payment-list.clearfix.hidden-md-up
+						ul.nav.nav-tabs(role='tablist')
+							li.nav-item
+								a.nav-link.active(data-toggle='tab', href='#tab1', role='tab')
+									.method-img
+										img(src="img/cart/icon1.png", alt="")
+									.method-name Thanh toán khi nhận hàng
+							li.nav-item
+								a.nav-link(data-toggle='tab', href='#tab2', role='tab')
+									.method-img
+										img(src="img/cart/icon2.png", alt="")
+									.method-name Thẻ ATM nội địa
+							li.nav-item
+								a.nav-link(data-toggle='tab', href='#tab3', role='tab')
+									.method-img
+										img(src="img/cart/icon3.png", alt="")
+									.method-name Thẻ tín dụng / ghi nợ
+						.tab-content
+							#tab1.tab-pane.active(role='tabpanel')
+								.method-des Quý khách sẽ thanh toán bằng tiền mặt hoặc thẻ khi Do Go Toi Yeu giao hàng cho quý khách
+							#tab2.tab-pane(role='tabpanel')
+								.method-des Thẻ ATM của bạn cần đăng ký sử dụng dịch vụ Internet Banking.
+									br
+									|Bạn sẽ được chuyển tới Napas để thanh toán
+							#tab3.tab-pane(role='tabpanel')
+								.method-des Hỗ trợ Credit và Debit.
+									br
+									|Bạn sẽ được chuyển tới OnePay để thanh toán.
+						//- ul.nav.nav-tabs(role='tablist')
+							li.nav-item
+								a.nav-link.tragop(data-toggle='tab', href='#tab4', role='tab')
+									.method-img
+										img(src="img/cart/icon4.png", alt="")
+									.method-name Thanh toán trả góp
+						//- .tab-content
+							#tab4.tab-pane(role='tabpanel')
+								.method-des Hỗ trợ Credit.
+									br
+									|Bạn sẽ được chuyển đến OnePay để thanh toán
+				//- section.payment-info.clearfix
+					.carttitle Phương thức thanh toán
+					.cart-form.clearfix
+						.payment-method
+							.select-group
+								input#tttb(type="radio", name="rd2" checked)
+								label(for="tttb")
+									.method-info
+										.method-detail
+											.method-name Thanh toán toàn bộ chi phí đơn hàng
+						.payment-method
+							.select-group
+								input#tt50(type="radio", name="rd2" )
+								label(for="tt50")
+									.method-info
+										.method-detail
+											.method-name Thanh toán trước 50% chi phí đơn hàng
+						.payment-method
+							.select-group
+								input#tt25(type="radio", name="rd2" )
+								label(for="tt25")
+									.method-info
+										.method-detail
+											.method-name Thanh toán trước 25% chi phí đơn hàng
+
+				.btn-wrap.clearfix
+					a.btn-back.hidden-sm-down(href="cart2.html") Quay lại
+					a.hvr-sweep-to-right.btn-continue(href="cart4.html") Thanh toán
+			
+			.col-12.col-lg-4
+				section.minicart.hidden-sm-down.clearfix
+					.carttitle Đơn hàng (<strong>2</strong> sản phẩm)
+					a.btn-edit(href="cart.html") Thay đổi
+					.carttable.clearfix
+						.group.clearfix
+							.product.clearfix
+								a.productimg(href="#")
+									img(src="img/product/1.png", alt="")
+								.productdetail
+									h3.product-name Dầu dừa - ABC123
+							.amount
+								.price 500.000đ
+								.count x1
+								.total 500.000đ
+						.group.clearfix
+							.product.clearfix
+								a.productimg(href="#")
+									img(src="img/product/2.png", alt="")
+								.productdetail
+									h3.product-name Dầu dừa - ABC123
+							.amount
+								.price 500.000đ
+								.count x1
+								.total 500.000đ
+						.group
+							.label Tổng tiền
+							.value.total 1.000.000đ
+						.group
+							.label Phí vận chuyển
+								a.help(href="#!" data-toggle="tooltip" data-placement="right" title="Xem chính sách giao hàng của ") <i class="fa fa-question-circle" aria-hidden="true"></i>
+							.value Miễn phí
+						//- .group
+							.desc-deliver
+								ul
+									li
+										strong TP.HCM: 
+										| Miễn phí vận chuyển <span> trong bán kính 30km </span> tính từ của hàng Hóc Môn số 465 Phạm Văn Sáng, Xuân Thới Thượng, Hóc Môn
+									li
+										strong TP.Cần Thơ:
+										| Miễn phí vận chuyển <span> trong bán kính 20km </span> tính từ của hàng Cần Thơ số 109 Nguyễn Đệ, phường An Hòa, quận Ninh Kiều
+									li Nếu địa chỉ giao hàng nằm ngoài khu vực miễn phí, Bộ phận giao hàng sẽ gọi điện cho quý khách để thông báo phí phát sinh trước khi giao hàng.
+						.group
+							.label Giảm giá
+							.value 1.000.000đ
+						.group
+							.label Số tiền phải thanh toán
+							.value 
+								strong 1.000.000đ
+								span (Giá chưa bao gồm VAT)
+						//- .group
+							.member-form
+								.module-tite Sử dụng thẻ thành viên
+								.form-group
+									label Mã khách hàng:
+									input(type="text" placeholder="Mã khách hàng")
+								.form-group
+									label Số điện thoại:
+									input(type="text" placeholder="Số điện thoại")
+								.frm-btn
+									input(type="submit", value="Áp dụng")

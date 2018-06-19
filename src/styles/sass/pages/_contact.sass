@@ -1,0 +1,108 @@
+.contact-page
+	padding: 0px 0px 60px
+
+.contact-map
+	margin-bottom: 40px
+	+bor-rad(5px)
+	border: 1px solid darken($white,10%)
+	overflow: hidden
+
+.contact-form
+	margin-bottom: 40px
+	.module-title
+		margin-bottom: 10px
+		font-weight: 600
+	.form-group
+	input, textarea
+		@extend .form-control
+		width: 100%
+		border: 1px solid darken($white,10%)
+		font-weight: 500
+		+fs(13rem)
+		padding: 10px 20px
+		+bor-rad(5px)
+		&:focus
+			border-color: lighten($green,0%)
+			box-shadow: 0 0 0 0.2rem color-rgba(lighten($green,0%),0.2)
+	.frm-btn
+		padding: 0px 15px
+	input[type="submit"]
+		display: inline-block
+		padding: 0px 40px
+		text-transform: uppercase
+		+fs(13rem)
+		font-weight: 600
+		background: none
+		color: $green
+		border: 1px solid darken($white,10%)
+		line-height: 36px
+		+bor-rad(5px)
+		+transition(all,0.5s)
+		&:hover
+			background: $green
+			color: $white
+
+.contact-info
+	.company
+		+fs(18rem)
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 15px
+	ul
+		li
+			padding-left: 25px
+			+pos(rel,null)
+			margin-bottom: 5px
+			.fa
+				+pos(abs, 5px null null 0)
+				color: $yellow
+.company-info
+	padding: 20px 20px
+	padding-left: 100px
+	// background: color-rgba($green,0.1)
+	background: darken($white,2%)
+	border: 1px dashed darken($white,10%)
+	margin-bottom: 30px
+	+pos(rel,null)
+	+bor-rad(10px)
+	&:before
+		content: '\f05a'
+		+fs(78rem)
+		line-height: 1
+		color: $main
+		opacity: 0.1
+		+pos(abs, 20px null null 20px)
+	.company
+		+fs(14rem)
+		line-height: 1.4
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 5px
+		color: $green
+	ul
+		li
+			color: darken($white,60%)
+			+fs(13rem)
+			.fa
+				+pos(abs, 5px null null 0)
+				color: $yellow
+				display: none
+.time-wrap
+	.module-title
+		+fs(15rem)
+		font-weight: 600
+		margin-bottom: 10px
+		margin-left: 20px
+	.time
+		padding: 10px 0
+		padding-left: 100px
+		+pos(rel,null)
+		&:before
+			content: '\f017'
+			+fs(70rem)
+			line-height: 1
+			opacity: 0.2
+			+pos(abs, 0 null null 20px)
+		strong
+			font-weight: 700
+			color: $green

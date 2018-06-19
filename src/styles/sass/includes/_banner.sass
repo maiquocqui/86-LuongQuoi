@@ -1,0 +1,101 @@
+.banner-wrap
+.banner
+	.slick-prev, .slick-next
+		+pos(abs, 50% null null null)
+		+transform(translateY(-50%))
+		+fs(0)
+		z-index: 5
+		opacity: 0
+		width: 40px
+		height: 40px
+		line-height: 36px
+		background: $white
+		+bor-rad(5px)
+		// border: 1px solid darken($white,10%)
+		box-shadow: 0px 5px 10px color-gba($black,0.3)
+		text-align: center
+		+transition(all,0.5s)
+		&:before
+			content: ''
+			+fs(24rem)
+			// font-family: 'Linearicons-Free'
+		&:hover
+			opacity: 1
+			color: $white
+			background: $green
+			border-color: $green
+		&.slick-disabled
+			opacity: 0
+			visibility: hidden
+	.slick-prev
+		left: 70px
+		&:before
+			content: '\f104'
+	.slick-next
+		right: 70px
+		&:before
+			content: '\f105'
+	&:hover
+		.slick-prev, .slick-next
+			opacity: 1
+			&:hover
+				opacity: 1
+	.slick-dots
+		+pos(abs, null 0 20px 0)
+		text-align: center
+		li
+			display: inline-block
+			width: 10px
+			height: 10px
+			+bor-rad(50px)
+			background: $white
+			// box-shadow: 0px 3px 5px color-rgba($black,0.1)
+			cursor: pointer
+			+transition(all,0.5s)
+			+ li
+				margin-left: 8px
+			&.slick-active
+				width: 40px
+				background: $green
+			button
+				display: none
+	.item
+		+pos(rel,null)
+		.img
+			img
+				width: 100%
+		.caption
+			width: 50%
+			+pos(abs, null 300px 120px null)
+			+fs(30rem)
+			font-weight: 400
+			padding: 30px
+			background: color-rgba($green,0.7)
+			+fs(18rem)
+			color: $white
+			text-align: right
+			width: 480px
+			padding: 30px 35px
+			+transition(all,2s)
+			visibility: hidden
+			opacity: 0
+			bottom: 80px
+			*
+				line-height: 1.5
+			.cap-img
+				+flexbox
+				justify-content: flex-end
+				line-height: 1.5
+				margin-bottom: 5px
+				img
+					display: initial
+			.big
+				text-transform: uppercase
+				+fs(30rem)
+				font-weight: 700
+				line-height: 1.5
+	.slick-current
+		.caption
+			bottom: 120px
+			visibility: visible
+			opacity: 1

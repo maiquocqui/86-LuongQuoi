@@ -1,0 +1,90 @@
+header.nav-down
+	//- section.header-top.clearfix
+		.container
+			.language
+				.dropdown.show
+					a.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						.img
+							img(src="img/vn.png", alt="")
+						.text Tiếng Việt
+					.dropdown-menu(aria-labelledby='dropdownMenuLink')
+						a(href='#')
+							.img
+								img(src="img/vn.png", alt="")
+							.text Tiếng Việt
+						a(href='#')
+							.img
+								img(src="img/en.png", alt="")
+							.text English
+			.col-right
+				.email
+					a(href="mailto:luongquoi@luongquoi.vn") luongquoi@luongquoi.vn
+				.hotline
+					a(href="mailto:luongquoi@luongquoi.vn") (+84).275.3.626.313
+	section.header-main.clearfix
+		.container
+			.sitelogo
+				a(href="index.html")
+					img(src="img/logo.png", alt="")
+			.search
+				.searchbox
+					input(type="text" placeholder="Tìm kiếm...")
+					.searchbutton <i class="material-icons">search</i> Tìm kiếm
+			.sitefeature
+				.feature
+					figure
+						i.material-icons local_shipping
+						figcaption Miễn phí giao hàng
+				.feature
+					figure
+						i.material-icons verified_user
+						figcaption Cam kết đảm bảo chất lượng
+				.feature
+					figure
+						i.material-icons timer
+						figcaption Giao hàng trong 2h
+			.col-right
+				.login
+					ul
+						li
+							a(href="#!") Đăng ký
+						li
+							a(href="#!") Đăng nhập
+				.cart
+					.cart-toggle <i class="material-icons">shopping_cart</i>
+						.cart-amount Giỏ hàng
+							.amount 10
+	section.header-menu.clearfix
+		.container
+			nav.menu
+				.mobile-logo
+					.sitelogo
+						a(href="index.html")
+							img(src="img/logo.png", alt="")
+				.menu-content
+					.menu-wrap
+						ul.menu-link
+							li.active
+								a(href="#!") Trang chủ
+							li
+								a(href="#!") Giới thiệu
+							li.has-sub
+								a(href="#!") Sản phẩm
+								.sub.animated.bounceIn
+									ul
+										li
+											a(href="#!") Dầu dừa
+										li
+											a(href="#!") Nước dừa
+										li
+											a(href="#!") Nước cốt dừa
+							//- li
+								a(href="#!") Nước dừa
+							//- li
+								a(href="#!") Nước cốt dừa
+							li
+								a(href="#!") Liên hệ
+							li.sale
+								a(href="#!") Khuyến mãi
+							li.news
+								a(href="#!") Góc nội trợ

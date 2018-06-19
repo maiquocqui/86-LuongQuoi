@@ -1,0 +1,242 @@
+.container
+	.row.flex.flex-wrap
+		.col-12
+			section.cartstep.clearfix
+				.step.active.finish
+					.number 1
+					.name Giỏ hàng
+				.step.active.finish
+					.number 2
+					.name Đăng nhập
+				.step.active
+					.number 3
+					.name Thông tin
+				.step
+					.number 4
+					.name Thanh toán
+	section.cart-page.clearfix
+		.row.flex.flex-wrap
+			.col-12.col-lg-8
+				section.receive-address.clearfix
+					.carttitle Thông tin khách hàng
+					.cart-form.clearfix
+						.group.clearfix
+							.user-title Thông tin người mua
+							.form-group
+								.label
+									label(for="") Họ tên:
+								.input
+									input.form-control(type="text", placeholder="Ví dụ: Nguyễn Văn A")
+							.form-group
+								.label
+									label(for="") Điện thoại:
+								.input.phone
+									input.form-control(type="text", placeholder="Ví dụ: 0921308381")
+									.des (Nhân viên giao nhận  sẽ liên hệ với SĐT này.)
+							.form-group
+								.label
+									label(for="") Email:
+								.input
+									input.form-control(type="text", placeholder="Ví dụ: Nguyễn Văn A")
+							.hr
+							.form-group
+								.label
+									label(for="") Tỉnh/Thành Phố:
+								.input
+									select(name="")
+										option(value="#") -- Chọn Tỉnh/Thành Phố --
+							.form-group
+								.label
+									label(for="") Địa chỉ chi tiết:
+								.input
+									input.form-control(type="text", placeholder="Ví dụ: 156 Nguyễn Văn Thủ, P.Đakao, Q.1")
+							.form-group
+								.label
+									label(for="") Lời nhắn:
+								.input
+									textarea.form-control(name="", cols="30", rows="2" placeholder="Ví dụ: Chuyển hàng ngoài giờ hành chính")
+						.group.clearfix
+							.check-group
+								input#ttmh(type="checkbox", name="" checked)
+								label#btn-ttmh(for="ttmh") Thông tin người nhận hàng cùng địa chỉ
+							.user-info.clearfix
+								.user-title Thông tin người nhận
+								.form-group
+									.label
+										label(for="") Họ tên:
+									.input
+										input(type="text", placeholder="Ví dụ: Nguyễn Văn A")
+								.form-group
+									.label
+										label(for="") Điện thoại:
+									.input.phone
+										input(type="text", placeholder="Ví dụ: 0921308381")
+										.des (Nhân viên giao nhận  sẽ liên hệ với SĐT này.)
+								.form-group
+									.label
+										label(for="") Email:
+									.input
+										input(type="text", placeholder="Ví dụ: Nguyễn Văn A")
+								.hr
+								.form-group
+									.label
+										label(for="") Tỉnh/Thành Phố:
+									.input
+										select(name="")
+											option(value="#") -- Chọn Tỉnh/Thành Phố --
+								.form-group
+									.label
+										label(for="") Địa chỉ chi tiết:
+									.input
+										input(type="text", placeholder="Ví dụ: 156 Nguyễn Văn Thủ, P.Đakao, Q.1")
+							//- .check-group
+								input#cntt(type="checkbox", name="" checked)
+								label(for="cntt") Cập nhật thông tin trên làm địa chỉ hiện tại của tôi
+						.group.clearfix
+							.form-group.receive-place
+								.label
+									label(for="") Địa điểm nhận hàng
+								.input
+									ul
+										li.select-group
+											input#rc1(type="radio", name="receiver" checked)
+											label(for="rc1") Nhận hàng tại cửa hàng
+											ul.receive-place-sub
+												li.select-group
+													input#rcs1(type="radio", name="receiversub" checked)
+													label(for="rcs1") Cửa hàng 1: Số 121, đường 24A, phường Bình Trị Đông B, quận Bình Tân, TP.Hồ Chí Minh
+													input#rcs2(type="radio", name="receiversub" checked)
+													label(for="rcs2") Cửa hàng 2: Số 74C, Đại lộ Đồng Khởi, phường Phú Tân, TP Bến Tre
+										li.select-group
+											input#rc2(type="radio", name="receiver")
+											label(for="rc2") Nhận hàng tại nhà
+							
+				//- section.shipping-kind.clearfix
+				//- 	.title Cách thức nhận hàng
+				//- 	.cart-form.clearfix
+				//- 		.select-group
+				//- 			input#ship1(type="radio", name="rd1" checked)
+				//- 			label(for="ship1") Tôi muốn nhận hàng ít lần nhất có thể
+				//- 			.des Đơn hàng sẽ được gom lại và hạn chế số lần giao hàng để tránh gây bất tiện cho quý khách.
+				//- 		#ship1-popup.popup-des
+				//- 			p 
+				//- 				strong Giao hàng dự kiến: 
+				//- 				|Trước 20:00 ngày 20/12/2016
+				//- 			.product-list
+				//- 				ul 
+				//- 					li Tã-bỉm quần Gô.N Friend new Super Jumbo L48
+				//- 					li Sony Xperia X
+				//- 		.select-group
+				//- 			input#ship2(type="radio", name="rd1")
+				//- 			label(for="ship2") Cập nhật thông tin trên làm địa chỉ hiện tại của tôi
+				//- 			.des Sản phẩm sẽ được giao ngay khi sẵn sàng vận chuyển. Đơn hàng có thể được giao nhiều lần.
+				//- 		#ship2-popup.popup-des
+				//- 			p 
+				//- 				strong Giao hàng dự kiến: 
+				//- 				|Trước 20:00 ngày 20/12/2016
+				//- 			ul.product-list
+				//- 				li Tã-bỉm quần Gô.N Friend new Super Jumbo L48
+				//- 				li Sony Xperia X
+
+				section.export-bill.clearfix
+					//- .carttitle 
+						.check-group
+							input#xuathd(type="checkbox", name="")
+							label#btn-xuathd(for="xuathd") Yêu cầu xuất hóa đơn GTGT cho đơn hàng này
+					.cart-form.bill-form.clearfix
+						.title Vui lòng điền đầy đủ thông tin công ty để nhận hóa đơn GTGT
+						.form-group
+							.label
+								label(for="") Mã số thuế:
+							.input
+								input(type="text", placeholder="Ví dụ: 324567351095")
+						.form-group
+							.label
+								label(for="") Tên công ty:
+							.input
+								input(type="text", placeholder="Ví dụ: ")
+						.form-group
+							.label
+								label(for="") Địa chỉ công ty:
+							.input
+								input(type="text", placeholder="Ví dụ: 109 Nguyễn Đệ, Phường An Hòa, Quận Ninh Kiều")
+						.des Lưu ý: Giá trị hóa đơn không bao gồm giá trị giảm giá
+				
+				section.coupon.clearfix
+					.carttitle Sử dụng mã giảm giá
+						.help( data-toggle="tooltip" data-placement="right" title="Mã giảm giá sẽ được chia đến từng sản phẩm và được làm tròn theo quy định của ") <i class="fa fa-question-circle" aria-hidden="true"></i>
+							//- span.help-tip 
+					.cart-form.clearfix
+						.input-coupon.clearfix
+							input(type="text" placeholder="Nhập mã giảm giá")
+							button.btn-submitcoupon Áp dụng
+						.des 
+							em Sau khi áp dụng, Mã giảm giá có thể không dùng được trong vòng 15 phút.
+						.module-title
+							|Trong quá trình thanh toán,  sẽ tạm khóa mã giảm giá của quý khách để đảm bảo phiên giao dịch được ổn định.
+							br
+							|Mã giảm giá sẽ được mở lại ngay khi phiên giao dịch kết thúc
+				.btn-wrap.clearfix
+					a.btn-back.hidden-sm-down(href="cart1.html") Quay lại
+					a.hvr-sweep-to-right.btn-continue(href="cart3.html") Tiếp tục
+			.col-12.col-lg-4
+				section.minicart.hidden-sm-down.clearfix
+					.carttitle Đơn hàng (<strong>2</strong> sản phẩm)
+					a.btn-edit(href="cart.html") Thay đổi
+					.carttable.clearfix
+						.group.clearfix
+							.product.clearfix
+								a.productimg(href="#")
+									img(src="img/product/1.png", alt="")
+								.productdetail
+									h3.product-name Dầu dừa - ABC123
+							.amount
+								.price 500.000đ
+								.count x1
+								.total 500.000đ
+						.group.clearfix
+							.product.clearfix
+								a.productimg(href="#")
+									img(src="img/product/2.png", alt="")
+								.productdetail
+									h3.product-name Dầu dừa - ABC123
+							.amount
+								.price 500.000đ
+								.count x1
+								.total 500.000đ
+						.group
+							.label Tổng tiền
+							.value.total 1.000.000đ
+						.group
+							.label Phí vận chuyển
+								a.help(href="#!" data-toggle="tooltip" data-placement="right" title="Xem chính sách giao hàng của ") <i class="fa fa-question-circle" aria-hidden="true"></i>
+							.value Miễn phí
+						//- .group
+							.desc-deliver
+								ul
+									li
+										strong TP.HCM: 
+										| Miễn phí vận chuyển <span> trong bán kính 30km </span> tính từ của hàng Hóc Môn số 465 Phạm Văn Sáng, Xuân Thới Thượng, Hóc Môn
+									li
+										strong TP.Cần Thơ:
+										| Miễn phí vận chuyển <span> trong bán kính 20km </span> tính từ của hàng Cần Thơ số 109 Nguyễn Đệ, phường An Hòa, quận Ninh Kiều
+									li Nếu địa chỉ giao hàng nằm ngoài khu vực miễn phí, Bộ phận giao hàng sẽ gọi điện cho quý khách để thông báo phí phát sinh trước khi giao hàng.
+						.group
+							.label Giảm giá
+							.value 1.000.000đ
+						.group
+							.label Số tiền phải thanh toán
+							.value 
+								strong 1.000.000đ
+								span (Giá chưa bao gồm VAT)
+						//- .group
+							.member-form
+								.module-tite Sử dụng thẻ thành viên
+								.form-group
+									label Mã khách hàng:
+									input(type="text" placeholder="Mã khách hàng")
+								.form-group
+									label Số điện thoại:
+									input(type="text" placeholder="Số điện thoại")
+								.frm-btn
+									input(type="submit", value="Áp dụng")

@@ -1,0 +1,189 @@
+.page-banner
+
+.col-left
+	padding: 0px 15px
+	width: 300px
+.col-main
+	padding: 0px 15px
+	width: calc(100% - 300px)
+
+.product-page
+	.category-info
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		margin-bottom: 30px
+		.cate-name
+			+fs(36rem)
+			font-weight: 700
+			text-transform: capitalize
+		.product-sort
+			select
+				border: none
+				+fs(13rem)
+				font-weight: 700
+				color: darken($white,60%)
+				text-transform: uppercase
+				cursor: pointer
+				&:hover
+					color: $black
+	.product-list
+		// .row
+		// 	margin: 0px -5px
+		// 	.col-6, .col-12
+		// 		padding: 0px 5px
+		article
+			margin-bottom: 30px
+
+.product-list
+	article
+		margin-bottom: 40px
+
+.product-col
+	+bor-rad(10px)
+	overflow: hidden
+	border: 1px solid darken($white,10%)
+	+pos(rel,null)
+	+transition(all,0.5s)
+	figure
+		+bor-rad(10px)
+		// overflow: hidden
+		// border: 1px solid transparent
+		// +pos(rel,null)
+		// +transition(all,0.5s)
+		.product-promotion
+			+fs(11rem)
+			font-weight: 600
+			color: $white
+			+bor-rad(3px)
+			padding: 0px 8px
+			background: $red
+			+pos(abs, 10px null null 10px)
+		.product-img
+			+flexbox
+			justify-content: center
+			align-items: center
+			align-items: center
+			background: darken($white,2%)
+			height: 200px
+			img
+				max-width: 70%
+				max-height: 70%
+				+transition(all,0.5s)
+		figcaption
+			padding: 10px 15px
+			background: $white
+			.product-name
+				color: $main
+				+fs(14rem)
+				font-weight: 700
+				a
+					color: inherit
+			.product-cate
+				+fs(12rem)
+				font-weight: 500
+				line-height: 1
+				color: darken($white,40%)
+				margin-bottom: 8px
+			.product-price
+				+transition(all,0.5s)
+				+flexbox
+				align-items: flex-end
+				align-content: flex-end
+				margin-bottom: 10px
+				.new
+					+fs(15rem)
+					line-height: 1
+					font-weight: 700
+					color: $green
+				.old
+					+fs(13rem)
+					line-height: 1
+					color: darken($white,20%)
+					text-decoration: line-through
+					margin-left: 15px
+			.product-btn
+				+flexbox
+				align-items: center
+				align-content: center
+				.btn-buy
+					display: block
+					+bor-rad(3px)
+					+pos(rel,null)
+					border: 1px solid darken($white,10%)
+					.material-icons
+						+fs(16rem)
+						line-height: 1
+						vertical-align: middle
+						+pos(abs, 0 null 0 0)
+						width: 30px
+						+flexbox
+						justify-content: center
+						align-items: center
+					span
+						display: block
+						+fs(11rem)
+						color: darken($white,40%)
+						font-weight: 600
+						text-transform: uppercase
+						background: $white
+						text-align: center
+						line-height: 28px
+						padding: 0px 10px
+						+pos(rel,null)
+						z-index: 3
+						+transition(all,0.3s)
+					&:hover
+						border-color: $green
+						span
+							background: $green
+							color: $white
+							margin-left: 30px
+				.btn-view
+					+flexbox
+					justify-content: center
+					align-items: center
+					width: 30px
+					height: 30px
+					text-align: center
+					+bor-rad(3px)
+					color: darken($white,40%)
+					border: 1px solid darken($white,10%)
+					margin-left: 10px
+					display: none
+					.material-icons
+						+fs(14rem)
+						line-height: 1
+						vertical-align: middle
+					&:hover
+						color: $green
+	&:hover
+		// border-color: $green
+		box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
+		// figure
+		// 	border-color: $green
+
+.pages
+	margin: 0 0px 40px
+	ul.pagination
+		+flexbox
+		li
+			+ li
+				margin-left: 10px
+			a
+				display: block
+				width: 40px
+				height: 40px
+				line-height: 38px
+				+bor-rad(5px)
+				text-align: center
+				+fs(13rem)
+				font-weight: 600
+				border: 1px solid darken($white,10%)
+			&:hover
+				a
+					color: lighten($green,20%)
+			&.active
+				a
+					background: darken($white,10%)

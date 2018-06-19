@@ -1,0 +1,215 @@
+.container
+	.row.flex.flex-wrap
+		.col-12
+			section.cartstep.clearfix
+				.step.active
+					.number 1
+					.name Giỏ hàng
+				.step
+					.number 2
+					.name Đăng nhập
+				.step
+					.number 3
+					.name Thông tin
+				.step
+					.number 4
+					.name Thanh toán
+		.col-12
+			section.cart-page.clearfix
+				h1.carttitle Giỏ hàng của bạn (<strong>2</strong> sản phẩm)
+				//- .cartnotice Giỏ hàng có chứa sản phẩm được tham gia chương trình khuyến mãi. 
+					a(target="_blank" href="#") Xem chi tiết
+					.removenotice
+				table.cart-table
+					thead
+						tr 
+							th.product Sản phẩm
+							th.price Đơn giá
+							th.amount Số lượng
+							th.total Thành tiền
+					tbody
+						tr 
+							td.product 
+								figure
+									a.product-img(href="#")
+										img(src="img/product/1.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#") Dầu dừa - ABC123
+										//- .product-des
+											p Màu xanh navy
+										//- .product-option
+											.product-size 
+												.label Size: 
+												select(name="")
+													option(value="") Lớn
+											.product-color
+												.label Màu sắc
+												.color-list
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Trắng")
+														.color-img(style="background: #fff")
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Đen")
+														.color-img(style="background: #000")
+													a.ajaxlink.active(href='#', data-toggle="tooltip" data-placement="right" title="Đỏ")
+														.color-img(style="background: #ED0000")
+										a.removeproduct(href="#") <i class="fa fa-times-circle" aria-hidden="true"></i> Xóa sản phẩm
+							td.price
+								.new 5.400.000đ
+								.old 6.000.000đ
+								.sale -10%
+							td.amount
+								.input-number
+									.btn-spin.btn-dec -
+									input(type="text", value="1")
+									.btn-spin.btn-inc +
+							td.total 5.400.000đ
+						tr 
+							td.product 
+								figure
+									a.product-img(href="#")
+										img(src="img/product/2.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#") Dầu dừa - ABC123
+										//- .product-des
+											p Màu hồng
+										//- .product-option
+											.product-size 
+												.label Size: 
+												select(name="")
+													option(value="") Lớn
+											.product-color
+												.label Màu sắc
+												.color-list
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Trắng")
+														.color-img(style="background: #fff")
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Đen")
+														.color-img(style="background: #000")
+													a.ajaxlink.active(href='#', data-toggle="tooltip" data-placement="right" title="Đỏ")
+														.color-img(style="background: #ED0000")
+										a.removeproduct(href="#") <i class="fa fa-times-circle" aria-hidden="true"></i> Xóa sản phẩm
+							td.price
+								.new 5.400.000đ
+								.old 6.000.000đ
+								.sale -10%
+							td.amount
+								.input-number
+									.btn-spin.btn-dec -
+									input(type="text", value="1")
+									.btn-spin.btn-inc +
+							td.total 5.400.000đ
+						tr 
+							td.product 
+								figure
+									a.product-img(href="#")
+										img(src="img/product/3.png", alt="")
+									figcaption
+										h3.product-name
+											a(href="#") Dầu dừa - ABC123
+										//- .product-des
+											p Màu tím
+										//- .product-option
+											.product-size 
+												.label Size: 
+												select(name="")
+													option(value="") Lớn
+											.product-color
+												.label Màu sắc
+												.color-list
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Trắng")
+														.color-img(style="background: #fff")
+													a.ajaxlink(href='#', data-toggle="tooltip" data-placement="right" title="Đen")
+														.color-img(style="background: #000")
+													a.ajaxlink.active(href='#', data-toggle="tooltip" data-placement="right" title="Đỏ")
+														.color-img(style="background: #ED0000")
+										a.removeproduct(href="#") <i class="fa fa-times-circle" aria-hidden="true"></i> Xóa sản phẩm
+							td.price
+								.new 5.400.000đ
+								.old 6.000.000đ
+								.sale -10%
+							td.amount
+								.input-number
+									.btn-spin.btn-dec -
+									input(type="text", value="1")
+									.btn-spin.btn-inc +
+							td.total 5.400.000đ
+				.totalamount Tạm tính: 
+					strong 1.000.000đ
+				.payment-des Giá chưa bao gồm VAT
+				.btn-wrap.clearfix
+					a.btn-back.hidden-sm-down(href="index.html") Tiếp tục mua hàng
+					a.hvr-sweep-to-right.btn-continue(href="cart1.html") Tiến hành thanh toán
+		.col-12
+			section.product-lastview.clearfix
+				h2.carttitle Sản phẩm đã xem
+				.cart-lastview-slide.product-list
+					.item
+						.product-col
+							figure
+								//- .product-promotion.sale -30%
+								a.product-img(href="#!")
+									img(src="img/product/1.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Dầu dừa - abc1
+									.product-cate 200ml
+					.item
+						.product-col
+							figure
+								//- .product-promotion.sale -30%
+								a.product-img(href="#!")
+									img(src="img/product/2.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Dầu dừa - abc1
+									.product-cate 200ml
+					.item
+						.product-col
+							figure
+								//- .product-promotion.sale -30%
+								a.product-img(href="#!")
+									img(src="img/product/3.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Dầu dừa - abc1
+									.product-cate 200ml
+					.item
+						.product-col
+							figure
+								//- .product-promotion.sale -30%
+								a.product-img(href="#!")
+									img(src="img/product/4.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Dầu dừa - abc1
+									.product-cate 200ml
+					.item
+						.product-col
+							figure
+								//- .product-promotion.sale -30%
+								a.product-img(href="#!")
+									img(src="img/product/5.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Dầu dừa - abc1
+									.product-cate 200ml
+					.item
+						.product-col
+							figure
+								//- .product-promotion.sale -30%
+								a.product-img(href="#!")
+									img(src="img/product/6.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Dầu dừa - abc1
+									.product-cate 200ml
+					.item
+						.product-col
+							figure
+								//- .product-promotion.sale -30%
+								a.product-img(href="#!")
+									img(src="img/product/26.png", alt="")
+								figcaption
+									h3.product-name
+										a(href="#!") Nước dừa - abc1
+									.product-cate 200ml

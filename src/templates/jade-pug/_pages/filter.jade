@@ -1,0 +1,102 @@
+.col-left.filter-col
+	.filter-wrap.category-group
+		.filter-group
+			.filter-title 
+				span Danh mục sản phẩm
+			.filter-option
+				nav.filter-category
+					ul
+						li.hassub.active
+							a(href="#") Dầu dừa
+							.btn-showsubfilter <i class="fa fa-angle-down"></i>
+							.sub
+								ul
+									li
+										a(href="#!") Dầu dừa nguyên chất
+									li.active
+										a(href="#!") Dầu dừa tinh khiết
+									li
+										a(href="#!") Dầu dừa tinh luyện
+						li
+							a(href="#") Nước dừa
+						li
+							a(href="#") Nước cốt dừa
+		.btn-closefilter.btn-close <span class="lnr lnr-cross"></span> Đóng bộ lọc
+	.filter-wrap.option-group
+		.filter-group
+			.filter-title 
+				span Mức giá
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option
+				.price-select
+					select
+						option -- Lọc khoảng giá --
+						option Dưới 2 triệu
+						option 2 - 5 triệu
+						option 5 - 10 triệu
+						option 10 - 20 triệu
+						option 20 - 50 triệu
+						option Trên 50 triệu
+		.filter-group
+			.filter-title 
+				span Theo dung tích
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.option-tag
+				nav.filter-ajax
+					ul
+						li
+							a(href="#") 150ml
+						li
+							a.active(href="#") 200ml
+						li
+							a(href="#") 250ml
+						//- li
+							a.active(href="#") Thời trang
+						li
+							a(href="#") 300ml
+						li
+							a(href="#") 500ml
+		.filter-group
+			.filter-title 
+				span Đóng gói
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.option-tag
+				nav.filter-ajax
+					ul
+						li
+							a.active(href="#") Hộp giấy
+						li
+							a(href="#") Lon nhôm
+						li
+							a(href="#") Bọc giấy
+						li
+							a.active(href="#") Lọ thủy tinh
+						li
+							a(href="#!") Hũ nhựa
+		//- .filter-group
+			.filter-title
+				span Màu sắc
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.option-tag
+				ul.color-picker
+					li.color
+						a.active(href="#!")
+							.color-img(style='background-color:#000')
+							.color-name Đen
+					li.color
+						a(href="#!")
+							.color-img(style='background-color:#fff')
+							.color-name Trắng
+					li.color
+						a(href="#!")
+							.color-img(style='background-color:#ff0')
+							.color-name Vàng
+					li.color
+						a(href="#!")
+							.color-img(style='background-color:#00f')
+							.color-name Lam
+					li.color
+						a(href="#!")
+							.color-img(style='background-color:#eee')
+							.color-name khác
+		.btn-closefilter.btn-close <span class="lnr lnr-cross"></span> Đóng bộ lọc

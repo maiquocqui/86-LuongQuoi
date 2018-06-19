@@ -1,0 +1,376 @@
+main
+	// &:before, &:after
+	// 	content: ''
+	// 	display: table
+	// 	width: 100%
+	// 	clear: both
+
+.home-title
+	+fs(24rem)
+	font-weight: 700
+	margin-bottom: 30px
+	&:after
+		content: ''
+		display: block
+		width: 40px
+		height: 3px
+		background: $maingradient
+		margin-top: 10px
+	&.text-center
+		&:after
+			margin: 10px auto 0
+.home-des
+	+fs(14rem)
+	color: darken($white,60%)
+	max-width: 70%
+	margin: 0 auto 30px
+.small-title
+	+fs(18rem)
+	text-transform: uppercase
+	font-weight: 600
+	margin-bottom: 20px
+
+.time-sale
+	display: inline-block
+	margin-left: 10px
+	+fs(13rem)
+	text-transform: uppercase
+	font-weight: 600
+	color: darken($white,60%)
+	.countdown
+		display: inline-block
+		font-weight: 600
+	span
+		display: inline-block
+		+fs(14rem)
+		font-weight: 600
+		background: $red
+		color: $white
+		+bor-rad(3px)
+		width: 28px
+		text-align: center
+		margin: 0px 5px
+
+.home-ads
+	padding: 60px 0 40px
+	// background: darken($white,2%)
+	// border-bottom: 1px solid darken($white,5%)
+	.img-ads
+		display: block
+		margin-bottom: 30px
+		overflow: hidden
+		+pos(rel,null)
+		+bor-rad(5px)
+		&:before
+			content: ''
+			+pos(abs, 15px 30px calc(100% - 15px) 30px)
+			z-index: 5
+			border-left: 1px solid $white
+			border-right: 1px solid $white
+			+transition(all,0.5s)
+		&:after
+			content: ''
+			+pos(abs, 30px calc(100% - 15px) 30px 15px)
+			z-index: 5
+			border-top: 1px solid $white
+			border-bottom: 1px solid $white
+			+transition(all,0.5s)
+		img
+			width: 100%
+			+transition(all,0.5s)
+		&:hover
+			box-shadow: 0px 10px 20px -10px color-rgba($black,0.3)
+			&:before
+				bottom: 15px
+			&:after
+				right: 15px
+			img
+				filter: brightness(90%)
+				+transform(scale3d(1.1,1.1,1))
+.tab-wrap
+	+flexbox
+	justify-content: center
+.nav-tabs
+	margin: 0
+	padding: 0
+	+flexbox
+	justify-content: center
+	border: none
+	margin-bottom: 30px
+	.nav-item
+		margin: 0 0 -1px
+		padding: 0
+		border: none
+		+ .nav-item
+			margin-left: 10px
+		.nav-link
+			margin: 0
+			padding: 0
+			border: none
+			display: block
+			+fs(14rem)
+			font-weight: 700
+			padding: 5px 15px
+			color: darken($white,60%)
+			border: 1px solid transparent
+			+bor-rad(5px)
+			+transition(all,0.5s)
+			&:hover
+				color: $green
+			&.active
+				color: $green
+				border: 1px solid $green
+
+
+.home-product
+	padding: 0 0 20px
+	.title-wrap
+		+bor-rad(5px)
+		// background: $maingradient
+		// padding: 10px 20px
+		margin-bottom: 20px
+		+pos(rel,null)
+		+flexbox
+		justify-content: center
+		.cate-title
+			+fs(24rem)
+			font-weight: 700
+			text-transform: uppercase
+			color: $main
+			line-height: 1.5
+			&:before, &:after
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				width: 50px
+				height: 1px
+				background: $green
+				margin: 0px 10px
+		.btn-link
+			+fs(13rem)
+			color: darken($white,60%)
+			+pos(abs, 5px 0px null null)
+			&:after
+				content: '\f105'
+				margin-left: 5px
+	.product-slick
+		margin-bottom: 30px
+		overflow: hidden
+		.slick-prev, .slick-next
+			+pos(abs, null null 10px null)
+			+fs(0)
+			z-index: 3
+			color: darken($white,40%)
+			width: 40px
+			height: 25px
+			background: $white
+			text-align: center
+			+bor-rad(5px)
+			border: 1px solid darken($white,20%)
+			&:before
+				content: ''
+				+fs(16rem)
+				line-height: 20px
+			&:hover
+				color: $main
+				background: darken($white,5%)
+			&.slick-disabled
+				opacity: 0.5
+		.slick-prev
+			left: calc(50% - 45px)
+			&:before
+				content: '\f104'
+		.slick-next
+			right: calc(50% - 45px)
+			&:before
+				content: '\f105'
+		.slick-dots
+			+pos(abs, null 0 0px 0)
+			text-align: right
+			visibility: hidden
+			opacity: 0
+			li
+				display: inline-block
+				width: 10px
+				height: 10px
+				+bor-rad(50px)
+				background: darken($white,10%)
+				// box-shadow: 0px 3px 5px color-rgba($black,0.1)
+				cursor: pointer
+				+transition(all,0.5s)
+				+ li
+					margin-left: 8px
+				&.slick-active
+					width: 40px
+					background: $green
+				button
+					display: none
+		.item
+			padding: 0px 10px 50px
+
+.home-sale
+	+bor-rad(10px)
+	// background: darken($white,3%)
+	background: lighten($green,65%)
+	padding: 30px 30px
+	margin: 60px 0 0
+	+pos(rel,null)
+	.time-sale
+		+pos(abs, 25px 30px null null)
+	.product-slick
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			z-index: 5
+			opacity: 0.7
+			&:before
+				content: ''
+				+fs(24rem)
+				font-family: 'Linearicons-Free'
+			&:hover
+				opacity: 1
+				color: $green
+			&.slick-disabled
+				opacity: 0.3
+				&:hover
+					color: inherit
+		.slick-prev
+			left: -25px
+			&:before
+				content: '\e875'
+		.slick-next
+			right: -25px
+			&:before
+				content: '\e876'
+
+.home-about
+	padding: 60px 0
+	+pos(rel,null)
+	&:before
+		content: ''
+		+pos(abs, 0 null 0 0)
+		right: 0
+		background: color-rgba($white,0.5)
+	.about-content
+		+pos(rel,null)
+		z-index: 1
+		padding: 30px 0
+	.home-title
+		margin-bottom: 30px
+	.company
+		+fs(18rem)
+		font-weight: 700
+		text-transform: uppercase
+		color: $green
+		margin-bottom: 20px
+	.content
+		margin-bottom: 30px
+		font-weight: 500
+		line-height: 2.2
+	.btn-wrap
+		.btn-viewmore
+			+mainbutton
+			line-height: 36px
+			padding: 0px 20px
+			+fs(13rem)
+	.about-img
+		+pos(rel,null)
+		z-index: 1
+		+bor-rad(20px)
+		// border: 10px solid $white
+		// background: $white
+		box-shadow: 0px 5px 30px -10px color-rgba($black,0.3)
+		img
+			width: 100%
+			+bor-rad(20px)
+	
+	.user-feedback
+		.slick-dots
+			+pos(abs, null 0 0px 0)
+			text-align: center
+			visibility: visible
+			opacity: 1
+			li
+				display: inline-block
+				width: 10px
+				height: 10px
+				+bor-rad(50px)
+				background: darken($white,10%)
+				// box-shadow: 0px 3px 5px color-rgba($black,0.1)
+				cursor: pointer
+				+transition(all,0.5s)
+				+ li
+					margin-left: 8px
+				&.slick-active
+					width: 40px
+					background: $green
+				button
+					display: none
+		.item
+		.feedback
+			text-align: center
+			padding-bottom: 50px
+			width: 80%
+			margin: 0 auto
+			.user
+				margin-bottom: 10px
+				figure
+					.user-img
+						width: 140px
+						height: 140px
+						+bor-rad(100px)
+						overflow: hidden
+						margin: 0 auto
+						border: 1px solid darken($white,10%)
+						img
+							width: 100%
+							width: 140px
+							height: 140px
+							+bor-rad(100px)
+							border: 3px solid $white
+					figcaption
+						padding: 10px 0
+						text-align: center
+						.user-name
+							font-weight: 700
+							+fs(14rem)
+							text-transform: uppercase
+						.user-cv
+							+fs(13rem)
+							font-weight: 500
+							color: darken($white,40%)
+			.feedback-content
+				+fs(16rem)
+				line-height: 1.8
+			
+
+
+.home-news
+	padding: 60px 0 80px
+	+pos(rel,null)
+	&:before
+		content: ''
+		+pos(abs, 0 null 0 0)
+		right: 0
+		background: color-rgba($white,0.5)
+	.home-title
+		+pos(rel,null)
+		z-index: 3
+	.news-list
+		+pos(rel,null)
+		z-index: 3
+	.btn-wrap
+		text-align: center
+		+pos(rel,null)
+		z-index: 3
+		.btn-viewmore
+			display: inline-block
+			background: $white
+			border: 1px solid darken($white,10%)
+			line-height: 36px
+			padding: 0px 20px
+			+fs(13rem)
+			+bor-rad(50px)
+			&:hover
+				background: darken($white,5%)
